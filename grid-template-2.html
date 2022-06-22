@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <style>
+    .Grid {
+      display: grid;
+      gap: 20px;
+      grid-template:
+        "head head head" auto
+        "sub1 main sub2" 1fr
+        "foot foot foot" auto
+        / 250px 1fr 250px
+      ;
+    }
+    @media screen and (max-width: 768px) {
+      .Grid {
+        grid-template:
+          "head head" auto
+          "main main" 1fr
+          "sub1 sub2" auto
+          "foot foot" auto
+          / 1fr 1fr
+        ;
+      }
+    }
+    .Grid_Head { grid-area: head; }
+    .Grid_Main { grid-area: main; }
+    .Grid_Sub1 { grid-area: sub1; }
+    .Grid_Sub2 { grid-area: sub2; }
+    .Grid_Foot { grid-area: foot; }
+    /* 装飾 */
+    .Grid > div {
+      padding: 10px;
+      border-radius: 4px;
+      border: 5px dashed #000;
+      
+    }
+    .Grid_Head { background-color: #42F4FF; }
+    .Grid_Main { background-color: #C242FF; }
+    .Grid_Sub1 { background-color: #42B0FF; }
+    .Grid_Sub2 { background-color: #FF42BF; }
+    .Grid_Foot { background-color: #FF4264; }
+  </style>
+</head>
+<body>
+  <div class="Grid">
+    <div class="Grid_Head">item</div>
+    <div class="Grid_Sub1">item</div>
+    <div class="Grid_Main">item</div>
+    <div class="Grid_Sub2">item</div>
+    <div class="Grid_Foot">item</div>
+  </div>
+</body>
+</html>
