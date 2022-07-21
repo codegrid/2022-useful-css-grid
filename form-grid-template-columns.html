@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <style>
+    form {
+      display: grid;
+      gap: 15px 10px;
+      grid-template-columns: [labels] auto [controls] 1fr;
+    }
+    form > * {
+      grid-column: controls;
+    }
+    form > label {
+      grid-column: labels;
+      align-self: center;
+      justify-self: end;
+    }
+    form > button {
+      grid-column: 1 / -1;
+    }
+    /* 装飾 */
+    input,
+    button {
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label for="form-name">名前</label>
+    <input name="form-name" type="text">
+    <label for="form-email">メールアドレス</label>
+    <input name="form-email" type="email">
+    <label for="form-note">メモ</label>
+    <textarea name="form-note"></textarea>
+    <button type="submit">送信する</button>
+  </form>
+</body>
+</html>

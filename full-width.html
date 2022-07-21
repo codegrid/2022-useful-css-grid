@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <style>
+    .Article {
+      display: grid;
+      gap: 20px 0;
+      grid-template-columns:
+        [full-start]
+          minmax(20px, 1fr)
+          [main-start]
+            minmax(300px, 670px)
+          [main-end]
+          minmax(20px, 1fr)
+        [full-end]
+      ;
+    }
+    .Article > * { grid-column: main; }
+    .Article > pre { grid-column: full; }
+    /* 装飾 */
+    body {
+      margin: 0;
+    }
+    .Article > * {
+      background-color: #41f4ff;
+      padding: 30px;
+    }
+    .Article > pre {
+      padding: 40px;
+      background-color: #ffb342;
+    }
+  </style>
+</head>
+<body>
+  <div class="Article">
+    <p>これは記事本文です。これは記事本文です。これは記事本文です。これは記事本文です。これは記事本文で...</p>
+    <pre>ここは幅いっぱいです。</pre>
+    <p>これは記事本文です。これは記事本文です。これは記事本文です。これは記事本文で...</p>
+  </div>
+</body>
+</html>
