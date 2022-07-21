@@ -5,3 +5,5 @@
 - https://codegrid.github.io/2022-useful-css-grid/margin-collapse-1.html
 - https://codegrid.github.io/2022-useful-css-grid/margin-collapse-2.html
 - https://codegrid.github.io/2022-useful-css-grid/one-line-grid.html
+- https://codegrid.github.io/2022-useful-css-grid/form-grid-template-columns.html
+- https://codegrid.github.io/2022-useful-css-grid/full-width.html
